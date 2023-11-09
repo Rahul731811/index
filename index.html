@@ -1,0 +1,601 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+input[type="number"]
+{
+    font-size:70%;
+}
+input[type="text"]
+{
+    font-size:60%;
+}
+
+body {
+  background-size:cover;
+  background-attachment:fixed;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ #arithmetic{
+            display: none;
+        }
+ #comparison{
+            display: none;
+        }
+ #logical{
+            display: none;
+        }
+#bitwise{
+            display: none;
+        }
+#assign{
+            display: none;
+        }
+
+
+.topnav{
+	overflow:hidden;
+	background-color:#caadfe;
+}
+
+.topnav a {
+  float: left;
+  color: #574682;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #745687;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #235435;
+  color: white;
+}
+
+</style>
+
+
+<script>
+function arithmetic() {
+                      
+            document.getElementById('arithmetic')
+                .style.display = "block"; 
+            document.getElementById('comparison')
+                .style.display = "none";
+            document.getElementById('logical')
+                .style.display = "none";
+            document.getElementById('bitwise')
+                .style.display = "none";
+            document.getElementById('assign')
+                .style.display = "none";
+
+        }
+
+function comparison() {
+           
+            document.getElementById('comparison')
+                .style.display = "block";
+            document.getElementById('arithmetic')
+                .style.display = "none";
+            document.getElementById('logical')
+                .style.display = "none";
+            document.getElementById('bitwise')
+                .style.display = "none";
+            document.getElementById('assign')
+                .style.display = "none";
+
+        }
+
+function logical() {
+           
+            document.getElementById('logical')
+                .style.display = "block";
+            document.getElementById('comparison')
+                .style.display = "none";
+            document.getElementById('arithmetic')
+                .style.display = "none";
+            document.getElementById('bitwise')
+                .style.display = "none";
+            document.getElementById('assign')
+                .style.display = "none";
+
+        }
+
+
+function bitwise() {
+           
+            document.getElementById('bitwise')
+                .style.display = "block";
+            document.getElementById('comparison')
+                .style.display = "none";
+            document.getElementById('arithmetic')
+                .style.display = "none";
+            document.getElementById('logical')
+                .style.display = "none";
+            document.getElementById('assign')
+                .style.display = "none";
+
+        }
+
+
+function assign() {
+           
+            document.getElementById('assign')
+                .style.display = "block";
+            document.getElementById('comparison')
+                .style.display = "none";
+            document.getElementById('arithmetic')
+                .style.display = "none";
+            document.getElementById('logical')
+                .style.display = "none";
+            document.getElementById('bitwise')
+                .style.display = "none";
+
+        }
+
+
+</script>
+
+</head>
+<body background="https://cdn.suwalls.com/wallpapers/abstract/green-waves-and-bubbles-18754-1920x1200.jpg">
+
+<div class="topnav">
+
+	<a onclick="arithmetic()">Arithmetic Operation</a>
+	<a onclick="comparison()">Comparison Operation</a>
+	<a onclick="logical()">Logical Operation</a>
+	<a onclick="bitwise()">Bitwise Operation</a>
+	<a onclick="assign()">Assignment Operation</a>
+
+
+</div>
+
+<div style="padding-left:16px">
+	<center><h2>Javascript operators</h2></center>
+</div>
+
+<div id="arithmetic">
+
+<center><h1>ARITHMETIC OPERATION</h1>
+ <script type="text/javascript">
+    function multiply(){
+      a=Number(document.my_cal.first.value);
+      b=Number(document.my_cal.second.value);
+      c=a*b;
+      document.my_cal.total.value=c;
+    }
+
+    function addition(){
+      a=Number(document.my_cal.first.value);
+      b=Number(document.my_cal.second.value);
+      c=a+b;
+      document.my_cal.total.value=c;
+    }
+
+
+    function subtraction(){
+      a=Number(document.my_cal.first.value);
+      b=Number(document.my_cal.second.value);
+      c=a-b;
+      document.my_cal.total.value=c;
+    }
+
+
+    function division(){
+      a=Number(document.my_cal.first.value);
+      b=Number(document.my_cal.second.value);
+      c=a/b;
+      document.my_cal.total.value=c;
+    }
+
+    function modulus(){
+      a=Number(document.my_cal.first.value);
+      b=Number(document.my_cal.second.value);
+      c=a%b;
+      document.my_cal.total.value=c;
+
+    }
+
+    function increment(){
+      a=Number(document.my_cal.first.value);
+      c=++a;
+      document.my_cal.total.value=c;
+    }
+
+    function decrement(){
+      a=Number(document.my_cal.first.value);
+      c=--a;
+      document.my_cal.total.value=c;
+    }
+
+
+  </script>
+
+  <!-- Opening a HTML Form. -->
+  <form name="my_cal">
+
+    <!-- Here user will enter 1st number. -->
+    <font size="6">
+    Number 1: <input type="number"  name="first" style="height:50px; width:60%;">
+    
+    <br>
+
+    <!-- Here user will enter 2nd number. --><br><br>
+    Number 2: <input type="number" name="second" style="height:50px; width:60%;">
+
+    <br><br>
+
+    <input type="button" value="ADD" onclick="javascript:addition();" style="height:30px; width:10%;">
+    <input type="button" value="SUB" onclick="javascript:subtraction();" style="height:30px; width:10%;">
+    <input type="button" value="MUL" onclick="javascript:multiply();" style="height:30px; width:10%;">
+    <input type="button" value="DIV" onclick="javascript:division();" style="height:30px; width:10%;">
+    <input type="button" value="MOD" onclick="javascript:modulus();" style="height:30px; width:10%;">
+    <input type="button" value="INCRE" onclick="javascript:increment();" style="height:30px; width:10%;">
+    <input type="button" value="DECRE" onclick="javascript:decrement();" style="height:30px; width:10%;">
+
+    <br><br>
+
+    <!-- Here result will be displayed. -->
+    Get Result: <input type="text" name="total" style="height:50px; width:60%;">
+
+</font>
+</form>
+</div>
+
+<div id="comparison">
+<center><h1>COMPARISON OPERATION</h1>
+
+
+ <script type="text/javascript">
+    function eq(){
+      a=Number(document.my_com.first.value);
+      b=Number(document.my_com.second.value);
+      if  (a==b){
+		document.my_com.total.value="The given numbers are Equal";
+}
+      else {
+		document.my_com.total.value="The given numbers are Not Equal";
+}
+    }
+
+    function notequal(){
+      a=Number(document.my_com.first.value);
+      b=Number(document.my_com.second.value);
+      if  (a!=b){
+		document.my_com.total.value="The given numbers are Not Equal";
+}
+      else {
+		document.my_com.total.value="The given numbers are Equal";
+}
+    }
+
+
+    function greater(){
+      a=Number(document.my_com.first.value);
+      b=Number(document.my_com.second.value);
+      if  (a>b){
+		document.my_com.total.value="The given number1 is Greater Than number2";
+}
+      else {
+		document.my_com.total.value="The given number1 is Not Greater Than number2";
+}
+    }
+
+
+    function lesser(){
+      a=Number(document.my_com.first.value);
+      b=Number(document.my_com.second.value);
+      if  (a<b){
+		document.my_com.total.value="The given number1 is Lesser Than number2";
+}
+	else {
+		document.my_com.total.value="The given number1 is Not Lesser Than number2";
+}
+     
+}
+    function greatequal(){
+      a=Number(document.my_com.first.value);
+      b=Number(document.my_com.second.value);
+      if  (a>=b){
+		document.my_com.total.value="The given number1 is Greater Than or Equal to number2";
+}
+      else {
+		document.my_com.total.value="The given number1 is Not Greater Than or Equal to number2";
+}
+
+    }
+
+  function lessequal(){
+      a=Number(document.my_com.first.value);
+      b=Number(document.my_com.second.value);
+      if  (a<=b){
+		document.my_com.total.value="The given number1 is Lesser Than or Equal to number2";
+}
+      else {
+		document.my_com.total.value="The given number1 is Not Lesser Than or Equal to number2";
+}
+    }
+
+  </script>
+
+  <!-- Opening a HTML Form. -->
+  <form name="my_com">
+
+    <!-- Here user will enter 1st number. -->
+    <font size="6">
+    Number 1: <input type="number" name="first" style="height:50px; width:60%;">
+    <!-- Here user will enter 2nd number. --><br><br>
+    Number 2: <input type="number" name="second" style="height:50px; width:60%;">
+
+    <br><br>
+
+   <input type="button" value="EQUAL" onclick="javascript:eq();" style="height:30px; width:20%;">
+    <input type="button" value="GREATER" onclick="javascript:greater();" style="height:30px; width:20%;">
+    <input type="button" value="GREATEREQUAL" onclick="javascript:greatequal();" style="height:30px; width:20%;">
+    <input type="button" value="LESSEREQUAL" onclick="javascript:lessequal();" style="height:30px; width:20%;">
+    <input type="button" value="LESSER" onclick="javascript:lesser();" style="height:30px; width:20%;">
+    <input type="button" value="NOTEQUAL" onclick="javascript:notequal();" style="height:30px; width:20%;">
+   
+    <br><br>
+
+    <!-- Here result will be displayed. -->
+    Get Result: <input type="text" name="total" style="height:50px; width:60%;">
+
+</font>
+</form>
+</div>
+
+<div id="logical">
+<center><h1>LOGICAL OPERATION</h1>
+
+
+ <script type="text/javascript">
+    function op1(){
+      a=Number(document.my_logic.first.value);
+      b=Number(document.my_logic.second.value);
+      c=((a<=100 )&& (b<=100));
+      if  (a<=100 && b<=100){
+		document.my_logic.total.value=c+".   The && operator returns true if both expressions are true.The condition is to check both numbers are lesser than 100";
+		
+}
+      else {
+		document.my_logic.total.value=c+".   The && operator returns false if any one expressions or both the expressions are false.The condition is to check both numbers are lesser than 100";
+}
+}
+
+    function op2(){
+      a=Number(document.my_logic.first.value);
+      b=Number(document.my_logic.second.value);
+      c=((a<=100 )|| (b<=100));
+      if  (a<=100 || b<=100){
+		document.my_logic.total.value=c+".    The || operator returns true if any one expressions or both the expressions are true.The condition is to check any one of the number is lesser than 100";
+}
+      else {
+		document.my_logic.total.value=c+".    The || operator returns false if both expressions are false.The condition is to check any one of the number is lesser than 100";
+}
+    }
+
+
+    function op3(){
+      a=Number(document.my_logic.first.value);
+      b=Number(document.my_logic.second.value);
+      c=(!(a==b));
+      if  (!(a==b)){
+		document.my_logic.total.value=c+".    The ! operator returns true is the condition is false.The condition is both numbers are equal";
+}
+      else {
+		document.my_logic.total.value=c+".    The ! operator returns false is the condition is true.The condition is both numbers are equal";
+}
+    }
+
+</script>
+
+ <!-- Opening a HTML Form. -->
+  <form name="my_logic">
+
+    <!-- Here user will enter 1st number. -->
+    <font size="6">
+    Number 1: <input type="number" name="first" style="height:50px; width:60%;">
+    <!-- Here user will enter 2nd number. --><br><br>
+    Number 2: <input type="number" name="second" style="height:50px; width:60%;">
+
+    <br><br>
+
+    <input type="button" value="AND" onclick="javascript:op1();" style="height:30px; width:20%;">
+    <input type="button" value="OR" onclick="javascript:op2();" style="height:30px; width:20%;">
+    <input type="button" value="NOT" onclick="javascript:op3();" style="height:30px; width:20%;">
+    
+    <br><br>
+
+    <!-- Here result will be displayed. -->
+    Get Result: <input type="text" name="total" style="height:50px; width:60%;">
+
+</font>
+</form>
+</div>
+
+<div id="bitwise">
+
+<center><h1>BITWISE OPERATION</h1>
+ <script type="text/javascript">
+    function and(){
+      a=Number(document.my_bit.first.value);
+      b=Number(document.my_bit.second.value);
+      c=a&b;
+      document.my_bit.total.value=c;
+    }
+
+    function or(){
+      a=Number(document.my_bit.first.value);
+      b=Number(document.my_bit.second.value);
+      c=a|b;
+      document.my_bit.total.value=c;
+    }
+
+
+    function xor(){
+      a=Number(document.my_bit.first.value);
+      b=Number(document.my_bit.second.value);
+      c=a^b;
+      document.my_bit.total.value=c;
+    }
+
+
+    function not(){
+      a=Number(document.my_bit.first.value);
+      c=~a;
+      document.my_bit.total.value=c;
+    }
+
+    function zeroleft(){
+      a=Number(document.my_bit.first.value);
+      b=Number(document.my_bit.second.value);
+      c=a<<b;
+      document.my_bit.total.value=c;
+
+    }
+
+    function signedright(){
+      a=Number(document.my_bit.first.value);
+      b=Number(document.my_bit.second.value);
+      c=a>>b;
+      document.my_bit.total.value=c;
+    }
+
+    function zeroright(){
+      a=Number(document.my_bit.first.value);
+      b=Number(document.my_bit.second.value);
+      c=a>>>b;
+      document.my_bit.total.value=c;
+    }
+
+
+  </script>
+
+  <!-- Opening a HTML Form. -->
+  <form name="my_bit">
+
+    <!-- Here user will enter 1st number. -->
+    <font size="6">
+    Number 1: <input type="number"  name="first" style="height:50px; width:60%;">
+    
+    <!-- Here user will enter 2nd number. --><br><br>
+    Number 2: <input type="number" name="second" style="height:50px; width:60%;">
+
+    <br><br>
+
+    <input type="button" value="AND" onclick="javascript:and();" style="height:30px; width:10%;">
+    <input type="button" value="OR" onclick="javascript:or();" style="height:30px; width:10%;">
+    <input type="button" value="XOR" onclick="javascript:xor();" style="height:30px; width:10%;">
+    <input type="button" value="NOT" onclick="javascript:not();" style="height:30px; width:10%;">
+    <input type="button" value="Zero fill left shift" onclick="javascript:zeroleft();" style="height:30px; width:10%;">
+    <input type="button" value="Signed right shift" onclick="javascript:signedright();" style="height:30px; width:10%;">
+    <input type="button" value="Zero fill right shift" onclick="javascript:zeroright();" style="height:30px; width:10%;">
+
+    <br><br>
+
+    <!-- Here result will be displayed. -->
+    Get Result: <input type="text" name="total" style="height:50px; width:60%;">
+
+</font>
+</form>
+</div>
+
+<div id="assign">
+
+<center><h1>ASSIGNMENT OPERATION</h1>
+ <script type="text/javascript">
+    function equal(){
+      a=Number(document.my_assign.first.value);
+      b=Number(document.my_assign.second.value);
+      a=b;
+      document.my_assign.total.value="Value assigned to Number1 is  "+a;
+    }
+
+    function plusequal(){
+      a=Number(document.my_assign.first.value);
+      b=Number(document.my_assign.second.value);
+      a+=b;
+      document.my_assign.total.value="Value assigned to Number1 is  "+a;
+    }
+
+
+    function minequal(){
+      a=Number(document.my_assign.first.value);
+      b=Number(document.my_assign.second.value);
+      a-=b;
+      document.my_assign.total.value="Value assigned to Number1 is  "+a;
+    }
+
+
+    function mul(){
+      a=Number(document.my_assign.first.value);
+      b=Number(document.my_assign.second.value);
+      a*=b;
+      document.my_assign.total.value="Value assigned to Number1 is  "+a;
+
+    }
+
+    function div(){
+      a=Number(document.my_assign.first.value);
+      b=Number(document.my_assign.second.value);
+      a/=b;
+      document.my_assign.total.value="Value assigned to Number1 is  "+a;
+
+    }
+
+    function mod(){
+      a=Number(document.my_assign.first.value);
+      b=Number(document.my_assign.second.value);
+      a%=b;
+      document.my_assign.total.value="Value assigned to Number1 is  "+a;
+    }
+
+    function square(){
+      a=Number(document.my_assign.first.value);
+      b=Number(document.my_assign.second.value);
+      a**=b;
+      document.my_assign.total.value="Value assigned to Number1 is  "+a;
+    }
+
+
+  </script>
+
+  <!-- Opening a HTML Form. -->
+  <form name="my_assign">
+
+    <!-- Here user will enter 1st number. -->
+    <font size="6">
+    Number 1: <input type="number"  name="first" style="height:50px; width:60%;">
+    
+    <!-- Here user will enter 2nd number. --><br><br>
+    Number 2: <input type="number" name="second" style="height:50px; width:60%;">
+
+    <br><br>
+
+    <input type="button" value="ASSIGN" onclick="javascript:equal();" style="height:30px; width:10%;">
+    <input type="button" value="ADD" onclick="javascript:plusequal();" style="height:30px; width:10%;">
+    <input type="button" value="SUB" onclick="javascript:minequal();" style="height:30px; width:10%;">
+    <input type="button" value="MULTIPY" onclick="javascript:mul();" style="height:30px; width:10%;">
+    <input type="button" value="DIVIDE" onclick="javascript:div();" style="height:30px; width:10%;">
+    <input type="button" value="MODULUS" onclick="javascript:mod();" style="height:30px; width:10%;">
+    <input type="button" value="SQUARE" onclick="javascript:square();" style="height:30px; width:10%;">
+
+    <br><br>
+
+    <!-- Here result will be displayed. -->
+    Get Result: <input type="text" name="total" style="height:50px; width:60%;">
+
+</font>
+</form>
+</div>
+
+</body>
+</html>
